@@ -3,40 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Parallax Effect</title>
     <style>
-        body{
-            margin: 0px;
-            padding: 0px;
+        body, ul {
+        margin: 0;
+        padding: 0;
+        background-image: url("Sources/background.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
         }
 
-        button{
-            margin: 1%;
-            width: 90%;
-            padding: 10px;
+        /* Styling the navigation bar */
+        header {
+        color: white;
+        padding: 15px 0;
         }
 
-        .hidden-navigation{
-            height: auto;
-            width: 25%;
-            background-color: gray;
+        nav ul {
+        list-style: none;
         }
 
-        .main-navigation{
-            text-align: center;
+        .nav-links li {
+        display: inline;
+        margin-right: 3%;
+        }
+
+        .nav-links li:first-child {
+        margin-left: 3%;
+        }
+
+        .nav-links li:last-child {
+        margin-right: 0;
+        }
+
+        .nav-links a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        }
+
+        .nav-links a:hover {
+        color: #ffd700; /* Change the color on hover */
+        }
+
+        .parallax {
+        background-size: cover;
+        background-attachment: fixed;
+        position: relative;
+        }
+
+        .parallax-content {
+        position: relative;
+        text-align: center;
+        color: white;
+        }
+
+        .content {
+        padding: 50px;
+        text-align: center;
+        background-color: #f0f0f0;
+        }
+
+        .parallax-container{
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh;
+        }
+
+        .regular-size{
+            width: 30vw;
+            height: 30vw;
+            border-radius: 100%;
+            margin-right: 3%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            width: 50%;
         }
     </style>
 </head>
 <body>
-    <div class="hidden-navigation">
-        <nav class="main-navigation">
-            <button>Home</button><br>
-            <button>Accomodations</button><br>  
-            <button>Features</button><br>   
-            <button>Offers</button><br> 
-            <button>Contact</button><br>    
-            <button>About</button><br>   
+    <header>
+        <nav>
+             <ul class="nav-links">
+                 <li><a href="#">Home</a></li>
+                 <li><a href="#">Accommodations</a></li>
+                 <li><a href="#">Booking</a></li>
+                 <li><a href="#">Amenities</a></li>
+                 <li><a href="#">Contact Us</a></li>
+             </ul>
         </nav>
-    </div>
+    </header>
+    <main>
+        <section class="parallax" id="parallax">
+            <div class="parallax-content">
+                <div class="parallax-container">
+                    <img src="Sources/Logo.jpg" alt="Logo" class="regular-size">
+                    <p style="color: black; text-align: justify;">
+                        Pong and Ninky’s Homestay began in 2017 with seven rooms across two floors and expanded in late 2018, 
+                        adding two more floors managed by Engineer Gener Constantino and Company, resulting in a total capacity of 14 rooms. 
+                        The company operates as an apartment rental and property management entity, specializing in offering quality 
+                        accommodations for both short-term stays and long-term leases in Naga City. The properties managed may include 
+                        individual apartments or entire complexes designed to cater to travelers, students, and professionals seeking residence.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="parallax" id="parallax">
+            <div class="parallax-content">
+                <div class="parallax-container">
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        window.addEventListener('scroll', function() {
+            let parallax = document.querySelector('.parallax');
+            let scrollPosition = window.pageYOffset;
+            parallax.style.backgroundPositionY = scrollPosition * 0.7 + 'px';
+        });
+    </script>
 </body>
 </html>
