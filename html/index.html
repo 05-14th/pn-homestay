@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Pong and Ninky's Homestay</title> 
     <style>
         body{
@@ -52,6 +53,7 @@
         background-size: cover;
         background-attachment: fixed;
         position: relative;
+        padding: 2%;
         }
 
         .parallax-content {
@@ -146,6 +148,11 @@
                 width: 100%;
             }
         }
+
+        .feedback-button{
+            float:left;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -202,6 +209,18 @@
                 </div>
             </div>
         </section>
+        <section class="parallax" id="parallax">
+            <div class="parallax-content">
+                <div class="">
+                    <form>
+                        <h3 style="color:#000">Feedback</h3>
+                        <input class="form-control feedback-input" name="email" placeholder="Email"><br>
+                        <textarea class="form-control" rows="5" name="content" placeholder="Write your feedback here..."></textarea><br>
+                        <input class="btn btn-success feedback-button" type="submit" value="Submit"> 
+                    </form>
+                </div>
+            </div>
+        </section><br>
         <section class="parallax" id="parallax">
             <div class="parallax-content">
                 <img src="/Sources/Logo.jpg" alt="Logo" class="small-size">
