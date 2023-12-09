@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong and Ninky's Homestay</title> 
+    <style>
+        body{
+        margin: 0;
+        padding: 0;
+        background-image: url("/Sources/background.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        }
+        /* Styling the navigation bar */
+        header {
+        color: white;
+        padding: 15px 0;
+        }
+
+        nav ul li{
+        list-style: none;
+        }
+
+        .nav-links{
+        display: inline;
+        margin-right: 3%;
+        }
+
+        .nav-links li{
+        margin-left: 3%;
+        float: left;
+        }
+
+        .nav-links li:last-child {
+            float: right;
+        }
+
+        .nav-links li a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        }
+
+        .nav-links li a:hover {
+        color: #ffd700; /* Change the color on hover */
+        }
+
+        .parallax {
+        background-size: cover;
+        background-attachment: fixed;
+        position: relative;
+        }
+
+        .parallax-content {
+        position: relative;
+        text-align: center;
+        color: white;
+        }
+
+        .content {
+        padding: 50px;
+        text-align: center;
+        background-color: #f0f0f0;
+        }
+
+        .description{
+          color: black; 
+          text-align: justify;
+        }
+
+        .parallax-container{
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100%;
+        }
+
+        .parallax-header{
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh;
+        }
+
+        .regular-size{
+            width: 30%;
+            height: auto;
+            border-radius: 100%;
+            margin-right: 3%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .small-size{
+            width: 10%;
+            height: 10%;
+            border-radius: 100%;
+            margin-right: 3%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            
+        }
+
+        p {
+            width: 50%;
+        }
+
+        .house-rules, .regulations{
+            color: black;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            width: auto;
+            height: auto;
+            background-color: white;
+            border-radius: 15px;
+            margin: 3%;
+            padding: 20px;
+            text-align: justify;
+        }
+
+        h3{
+            text-align: center;
+        }
+
+        .floating-background{
+            background-image: url('Sources/background1.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .footer-nav{
+            color: #000;
+            padding: 20px;
+        }
+
+        .footer-nav a{ 
+            text-decoration: none;
+            margin-right: 1%;
+            color: #000;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .parallax-header, .description{
+                display: block;
+                text-align: center;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+             <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Accommodations</a></li>
+                <li><a href="#">Booking</a></li>
+                <li><a href="#">Amenities</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="/signin">Login</a></li>
+             </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="parallax" id="parallax">
+            <div class="parallax-content">
+                <div class="parallax-header">
+                    <img src="/Sources/Logo.jpg" alt="Logo" class="regular-size">
+                    <p class="description">
+                        Pong and Ninky’s Homestay began in 2017 with seven rooms across two floors and expanded in late 2018, 
+                        adding two more floors managed by Engineer Gener Constantino and Company, resulting in a total capacity of 14 rooms. 
+                        The company operates as an apartment rental and property management entity, specializing in offering quality 
+                        accommodations for both short-term stays and long-term leases in Naga City. The properties managed may include 
+                        individual apartments or entire complexes designed to cater to travelers, students, and professionals seeking residence.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="parallax floating-background" id="parallax">
+            <div class="parallax-content">
+                <div class="parallax-container">
+                    <div class="house-rules">
+                        <h3>House Rules and Regulations</h3>
+                        <ol>
+                        <li>NO Illegal Activities</li><br>
+                        <li>NO Drinking of Alcoholic Beverages</li><br>
+                        <li>NO Parties or Excessive Noise</li><br>
+                        <li>NO Vandalism</li><br>
+                        <li>Visitors must Log In/Register</li><br>
+                        <li>Maintain Cleanliness</li><br>
+                        <li>Respect the privacy of other tenants.</li><br>
+                        <li>Do not dispose of food waste in toilet bowl or kitchen sink.</li><br>
+                        <li>Tenants must notify the owner of overnight vernight guests guests relatives (relatives only) before their stay.</li><br>
+                        <li>Tenants will be held liable for the repairs and replacement of damages they cause.</li><br>
+                        <li>Tenants are responsible for the behavior/conduct onduct of of anyone anyone they they allow into the property.</li><br>
+                        <li>Smoking/E-Cigarettes are not permitted anywhere inside the Mbuilding (rooms, hallway,stairs).</li><br>
+                        <li>The tenants are required to ask permission from the owner for any changes or improvement that need to be done inside the room. Including 
+                            but not limited to drilling of holes on the building structure.</li><br>
+                        <li>The tenants are required to report immediately any damage or malfunction inside the room in order to properly rectify these problems.</li><br>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="parallax" id="parallax">
+            <div class="parallax-content">
+                <img src="/Sources/Logo.jpg" alt="Logo" class="small-size">
+                <div class="footer-nav">
+                    <span>&copy; 2023 Pong and Ninky’s Homestay. All rights reserved.&nbsp|&nbsp</span>
+                    <a href="">Home</a>
+                    <a href="">Accommodations</a>
+                    <a href="">Booking</a>
+                    <a href="">Amenities</a>
+                    <a href="">About Us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        window.addEventListener('scroll', function() {
+            let parallax = document.querySelector('.parallax');
+            let scrollPosition = window.pageYOffset;
+            parallax.style.backgroundPositionY = scrollPosition * 0.7 + 'px';
+        });
+    </script>
+</body>
+</html>
