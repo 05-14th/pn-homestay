@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Data</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Add some basic styling to the table */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <h1>User Data</h1>
+  <button class="btn btn-success">Add Room</button>
+  <table>
+    <thead>
+      <tr>
+        <th>Room ID</th>
+        <th>Room Description</th>
+        <th>Price</th>
+        <th>Status</th>
+        <th>Booking Date</th>
+        <th>Booking Time</th>
+        <th>Checkout Date</th>
+        <th>Checkout Time</th>
+        <th>Photo</th>
+        <th>Date Posted</th>
+        <th>Date Updated</th>
+        <th>Action</th>
+        <!-- Add more table headers for other user attributes -->
+      </tr>
+    </thead>
+    <tbody>
+      <% data.forEach(user => { %>
+        <tr>
+          <td><%= user.room_id %></td>
+          <td><%= user.room_description %></td>
+          <td><%= user.price %></td>
+          <td><%= user.status %></td>
+          <td><%= user.booking_date %></td>
+          <td><%= user.booking_time %></td>
+          <td><%= user.checkout_date %></td>
+          <td><%= user.checkout_time %></td>
+          <td><%= user.photo %></td>
+          <td><%= user.date_posted %></td>
+          <td><%= user.updated_at %></td>
+          <td>
+            <button class="btn btn-warning" data-id="<%= user.room_id %>">Edit</button>
+            <button class="btn btn-danger" data-id="<%= user.room_id %>">Delete</button>
+          </td>
+          <!-- Add more table cells for other user attributes -->
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</body>
+</html>

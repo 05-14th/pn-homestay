@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pong and Ninky’s Homestay</title>
+  <style>
+    body{
+        margin: 0;
+        padding: 0;
+        background-image: url("/Sources/background.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        }
+        /* Styling the navigation bar */
+        header {
+        color: white;
+        padding: 15px 0;
+        }
+
+        nav ul li{
+        list-style: none;
+        }
+
+        .nav-links{
+        display: inline;
+        margin-right: 3%;
+        }
+
+        .nav-links li{
+        margin-left: 3%;
+        float: left;
+        }
+
+        .nav-links li:last-child {
+            float: right;
+        }
+
+        .nav-links li a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        }
+
+        .nav-links li a:hover {
+        color: #ffd700; /* Change the color on hover */
+        }
+  </style>
+</head>
+<body>
+    <header>
+      <nav>
+          <ul class="nav-links">
+              <li><a href="/">Home</a></li>
+              <li><a href="#">Accommodations</a></li>
+              <li><a href="/booking">Booking</a></li>
+              <li><a href="#">Amenities</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="/signin">Login</a></li>
+          </ul>
+      </nav>
+  </header>
+  <h1>Database Contents:</h1>
+  <ul>
+    <% data.forEach((row) => { %>
+      <li><%= row.column_name %></li> <!-- Replace 'column_name' with your actual column name -->
+    <% }); %>
+  </ul>
+</body>
+</html>

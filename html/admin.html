@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong and Ninky’s Homestay | Admin Control</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+    <style>
+    
+        .currentContent{
+            width:100%;
+            height: 100vh;
+            border: 1px solid #ccc; /* Optional: Add a border for visualization */
+            display: flex; /* Use flexbox for easier centering */
+            justify-content: center; /* Horizontally center the child elements */
+            align-items: center; /* Vertically center the child elements */
+        }
+
+        iframe{
+            width: 100%;
+            height: 100%;
+        }
+
+        .navigation{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-button{
+            width: 10%;
+            height: 10%;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-dashboard">
+        <div id="currentContent" class="currentContent">
+            <iframe id="currentDisplay" class="currentDisplay" src="/users" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <nav class="navigation">
+            <span class="btn btn-primary nav-button" data-link="/users" onclick="changeView(this)"><i class="fa-solid fa-user"></i></span><br>
+            <span class="btn btn-primary nav-button" data-link="/settings" onclick="changeView(this)"><i class="fa-solid fa-cog"></i></span><br>
+            <span class="btn btn-primary nav-button" data-link="/feedbacks" onclick="changeView(this)"><i class="fa-solid fa-comment"></i></i></span><br>
+            <span class="btn btn-primary nav-button" onclick="window.location.href='/'"><i class="fa-solid fa-right-from-bracket"></i></span><br>
+        </nav>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var display = document.getElementById("currentDisplay");
+
+        function changeView(button){
+            var newSrc = button.getAttribute("data-link");
+            display.src=newSrc;
+        }
+    </script>
+</body>
+</html>

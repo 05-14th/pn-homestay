@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Data</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Add some basic styling to the table */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <h1>User Data</h1>
+  <button class="btn btn-success">Add User</button>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Fullname</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Contact Number</th>
+        <th>Action</th>
+        <!-- Add more table headers for other user attributes -->
+      </tr>
+    </thead>
+    <tbody>
+      <% data.forEach(user => { %>
+        <tr>
+          <td><%= user.user_id %></td>
+          <td><%= user.fullname %></td>
+          <td><%= user.username %></td>
+          <td><%= user.email %></td>
+          <td><%= user.contact_number %></td>
+          <td>
+            <button class="btn btn-warning" data-id="<%= user.user_id %>">Edit</button>
+            <button class="btn btn-danger" data-id="<%= user.user_id %>">Delete</button>
+          </td>
+          <!-- Add more table cells for other user attributes -->
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</body>
+</html>
