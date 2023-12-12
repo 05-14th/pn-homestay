@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pong and Ninky’s Homestay</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body{
+        margin: 0;
+        padding: 0;
+        background-image: url("/Sources/Front2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+        /* Styling the navigation bar */
+        header {
+        color: white;
+        padding: 15px 0;
+        }
+
+        nav ul li{
+        list-style: none;
+        }
+
+        .nav-links{
+        display: inline;
+        margin-right: 3%;
+        }
+
+        .nav-links li{
+        margin-left: 3%;
+        float: left;
+        }
+
+        .nav-links li:last-child {
+            float: right;
+        }
+
+        .nav-links li a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        }
+
+        .nav-links li a:hover {
+        color: #ffd700; /* Change the color on hover */
+        }
+
+        .booking-frame{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .book{
+          width: 90%;
+          padding: 20px;
+          border-radius: 15px;
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+          display: flex;
+        }
+
+        .frame{
+          border: 1px solid black;
+          margin: 5px;
+        }
+        
+        .accommodations{
+          width: 50%;
+          padding: 20px;
+          text-align: center;
+        }
+
+        .accom-contents{
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          margin: 15px;
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+          padding: 15px;
+          border-radius: 15px;
+          background-color: white;
+        }
+
+        .accom-contents div img{
+          width: 70%;
+          border-radius: 15px;
+        }
+
+        .main-accom{
+          display: flex;
+          justify-content: center;
+        }
+  </style>
+</head>
+<body>
+    <header>
+      <nav>
+          <ul class="nav-links">
+              <li><a href="/">Home</a></li>
+              <li><a href="/accommodation">Accommodations</a></li>
+              <li><a href="/booking">Booking</a></li>
+              <li><a href="/amenities">Amenities</a></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/signin">Login</a></li>
+          </ul>
+      </nav>
+  </header>
+  <div class="main-accom">
+    <div class="accommodations">
+      <h1>Amenities</h1>
+      <div class="accom-contents">
+        <div>
+            <img src="/Sources/Kitchenette.jpg" alt="Kitchenette">
+            <h3>Kitchenette</h3>
+            <p>
+              Prepare your favorite meals just the way you like them! Our modern kitchenettes are equipped with all the essentials, allowing you to cook and dine at your leisure. Whether it's a quick breakfast or a gourmet dinner, you have the freedom to savor home-cooked delights during your stay.
+            </p>
+        </div>
+    </div>
+      <div class="accom-contents">
+        <div>
+            <img src="/Sources/ACU.jpg" alt="Air Condition Unit">
+            <h3>Air Conditioning Unit</h3>
+            <p>
+              Beat the heat and bask in cool comfort with our efficient air conditioning units. No matter the weather outside, you'll always return to a refreshing and relaxing environment within your room. Experience undisturbed rest and relaxation in an optimal climate.
+            </p>
+        </div>
+      </div>
+      <div class="accom-contents">
+        <div>
+            <img src="/Sources/Picks/bathroom.jpg" alt="Private Bathroom">
+            <h3>Private Bathroom</h3>
+            <p>
+              Enjoy the luxury of your own private sanctuary. Our meticulously designed bathrooms offer a serene space where you can unwind after a day of exploring. Freshen up and rejuvenate with our premium amenities, ensuring a relaxing experience throughout your stay.
+            </p>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

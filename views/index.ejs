@@ -9,9 +9,11 @@
         body{
         margin: 0;
         padding: 0;
-        background-image: url("/Sources/Front2.jpg");
+        background-image: url("/Sources/background.jpg");
         background-repeat: no-repeat;
         background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
         }
         /* Styling the navigation bar */
         header {
@@ -69,9 +71,6 @@
         .description{
           color: black; 
           text-align: justify;
-          background-color: #ffffffa4;
-          padding: 10px;
-          border-radius: 15px;
         }
 
         .parallax-container{
@@ -114,7 +113,7 @@
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
             width: auto;
             height: auto;
-            background-color: #ffffffa4;
+            background-color: white;
             border-radius: 15px;
             margin: 3%;
             padding: 20px;
@@ -132,20 +131,14 @@
         }
 
         .footer-nav{
-            color: white;
+            color: #000;
             padding: 20px;
-            text-shadow:
-                    -1px -1px 0 #000,  
-                    1px -1px 0 #000,
-                    -1px 1px 0 #000,
-                    1px 1px 0 #000;
-          
         }
 
         .footer-nav a{ 
             text-decoration: none;
             margin-right: 1%;
-            color: white;
+            color: #000;
         }
 
         @media only screen and (max-width: 600px) {
@@ -165,14 +158,20 @@
 <body>
     <header>
         <nav>
+            <% data.forEach(user => { %>
              <ul class="nav-links">
                 <li><a href="/">Home</a></li>
-                <li><a href="/accommodation">Accommodations</a></li>
+                <li><a href="#">Accommodations</a></li>
                 <li><a href="/booking">Booking</a></li>
-                <li><a href="/amenities">Amenities</a></li>
-                <li><a href="/about">About Us</a></li>
-                <li><a href="/signin">Login</a></li>
+                <li><a href="#">Amenities</a></li>
+                <li><a href="#">About Us</a></li>
+                <% if (user.user_id !== null) { %>
+                    <li><a href="">user.username</a></li>
+                <% } else { %>
+                    <li><a href="/signin">Login</a></li>
+                <% } %>
              </ul>
+             <%});%>
         </nav>
     </header>
     <main>
@@ -190,7 +189,7 @@
                 </div>
             </div>
         </section>
-        <section class="" id="parallax">
+        <section class="parallax floating-background" id="parallax">
             <div class="parallax-content">
                 <div class="parallax-container">
                     <div class="house-rules">

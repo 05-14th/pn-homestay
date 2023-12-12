@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pong and Ninky’s Homestay</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body{
+        margin: 0;
+        padding: 0;
+        background-image: url("/Sources/Front2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+        /* Styling the navigation bar */
+        header {
+        color: white;
+        padding: 15px 0;
+        }
+
+        nav ul li{
+        list-style: none;
+        }
+
+        .nav-links{
+        display: inline;
+        margin-right: 3%;
+        }
+
+        .nav-links li{
+        margin-left: 3%;
+        float: left;
+        }
+
+        .nav-links li:last-child {
+            float: right;
+        }
+
+        .nav-links li a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        }
+
+        .nav-links li a:hover {
+        color: #ffd700; /* Change the color on hover */
+        }
+
+        .booking-frame{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .book{
+          width: 90%;
+          padding: 20px;
+          border-radius: 15px;
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+          display: flex;
+        }
+
+        .frame{
+          border: 1px solid black;
+          margin: 5px;
+        }
+        
+        .accommodations{
+          width: 50%;
+          padding: 20px;
+          text-align: center;
+        }
+
+        .accom-contents{
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          margin: 15px;
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+          padding: 15px;
+          border-radius: 15px;
+          background-color: white;
+        }
+
+        .accom-contents div img{
+          width: 70%;
+          border-radius: 15px;
+        }
+
+        .main-accom{
+          display: flex;
+          justify-content: center;
+        }
+
+        ul li{
+          list-style: none;
+        }
+  </style>
+</head>
+<body>
+    <header>
+      <nav>
+          <ul class="nav-links">
+              <li><a href="/">Home</a></li>
+              <li><a href="/accommodation">Accommodations</a></li>
+              <li><a href="/booking">Booking</a></li>
+              <li><a href="/amenities">Amenities</a></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/signin">Login</a></li>
+          </ul>
+      </nav>
+  </header>
+  <div class="main-accom">
+    <div class="accommodations">
+      <h1>About</h1>
+      <div class="accom-contents">
+          <p>De Leon Apartment (Pong and Ninky’s Home) is four-storey building with the land area of 200 sq. meters. It owned by Mrs. Daisy Balane De Leon and managed by Mr. John Arjay G. Balane. The first two floors with, seven rooms for accommodation, were completed in 2017. Subsequently, the decision was made to add two more floors to accommodate more tenants. Construction began again and was completed in late 2018 by Engr. Gener Constantino and Company. Finally, after the construction, it started its role of accommodating tenants who work, study, etc., in the vicinity of Naga City.</p>
+      </div>
+      <div class="accom-contents">
+        <ul style="text-align: left;">
+          <li><i class="fa fa-address-book"></i> Owner - Daisy Balane De Leon - 09454880980</li>
+          <li><i class="fa fa-address-book"></i> Manager - John Arjay G. Balane - 09302825123</li>
+          <li><i class="fa fa-envelope"></i> johnarjaybalane@gmail.com</li>
+          <li><i class="fa fa-facebook-f"></i> John Arjay Balane</li>
+        </ul>
+    </div>
+    </div>
+  </div>
+</body>
+</html>

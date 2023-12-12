@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pong and Ninky’s Homestay</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body{
+        margin: 0;
+        padding: 0;
+        background-image: url("/Sources/Front2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+        /* Styling the navigation bar */
+        header {
+        color: white;
+        padding: 15px 0;
+        }
+
+        nav ul li{
+        list-style: none;
+        }
+
+        .nav-links{
+        display: inline;
+        margin-right: 3%;
+        }
+
+        .nav-links li{
+        margin-left: 3%;
+        float: left;
+        }
+
+        .nav-links li:last-child {
+            float: right;
+        }
+
+        .nav-links li a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        }
+
+        .nav-links li a:hover {
+        color: #ffd700; /* Change the color on hover */
+        }
+
+        .booking-frame{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .book{
+          width: 90%;
+          padding: 20px;
+          border-radius: 15px;
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+          display: flex;
+        }
+
+        .frame{
+          border: 1px solid black;
+          margin: 5px;
+        }
+        
+        .accommodations{
+          width: 50%;
+          padding: 20px;
+          text-align: center;
+        }
+
+        .accom-contents{
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          margin: 15px;
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+          padding: 15px;
+          border-radius: 15px;
+          background-color: white;
+        }
+
+        .accom-contents div img{
+          width: 70%;
+          border-radius: 15px;
+        }
+
+        .main-accom{
+          display: flex;
+          justify-content: center;
+        }
+  </style>
+</head>
+<body>
+    <header>
+      <nav>
+          <ul class="nav-links">
+              <li><a href="/">Home</a></li>
+              <li><a href="/accommodation">Accommodations</a></li>
+              <li><a href="/booking">Booking</a></li>
+              <li><a href="/amenities">Amenities</a></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/signin">Login</a></li>
+          </ul>
+      </nav>
+  </header>
+  <div class="main-accom">
+    <div class="accommodations">
+      <h1>Accommodations</h1>
+      <div class="accom-contents">
+          <div>
+            <img src="/Sources/Picks/bathroom.jpg" alt="Bathroom">
+            <h3>Bathroom</h3>
+          </div>
+          <p>Both bathrooms in De Leon Apartment (Pong and Ninky’s Home) were clean and well-maintained. Plumbing fixtures, such as sinks, toilets, and showers, were in proper working condition.</p>
+      </div>
+      <div class="accom-contents">
+        <div>
+          <img src="/Sources/Picks/bedroom.jpg" alt="Bedroom">
+          <h3>Bedroom</h3>
+        </div>
+        <p>The bedrooms were spacious and comfortable. The windows and doors were good in good working order. Closets and storage spaces are well-organized, indicating a high level of care by the tenants. On the first and second floors, there are four units, each containing a single bed slot per room. On the third floor, there are four units, with one double-decker bed per room. Finally, on the fourth floor, there are three units, each with a single bed per room.</p>
+      </div>
+      <div class="accom-contents">
+        <div>
+          <img src="/Sources/Picks/kitchen.jpg" alt="Kitchen">
+          <h3>Kitchen</h3>
+        </div>
+        <p>The kitchen was modern and equipped with up-to-date appliances. All appliances were functioning properly. There were no leaks or plumbing issues observed.</p>
+      </div>
+      <div class="accom-contents">
+        <div>
+          <img src="/Sources/Picks/living-room.jpg" alt="Living Room">
+          <h3>Living Room</h3>
+        </div>
+        <p>The living room was well-furnished and inviting. There were no visible signs of water damage or mold. The flooring appeared to be in good condition.</p>
+      </div>
+      <div class="accom-contents">
+        <div>
+          <img src="/Sources/Picks/safety.jpg" alt="Safety">
+          <h3>Safety and Security</h3>
+        </div>
+        <p>All doors and windows were secure, with functioning locks. Smoke detectors and carbon monoxide alarms are present and in working condition. Each floor is equipped with easily accessible fire, demonstrating a commitment to tenant safety.</p>
+      </div>
+      <div class="accom-contents">
+        <div>
+          <img src="/Sources/Picks/utility-room.jpg" alt="Utility">
+          <h3>Utility</h3>
+        </div>
+        <p>The unitality areas, including the laundry room and any mechanical rooms, were inspected. There were no visible issues with the HVAC system, electrical wiring, or water heater.</p>
+      </div>
+    </div>
+    </div>
+  </div>
+</body>
+</html>

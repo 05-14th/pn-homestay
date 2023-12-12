@@ -26,6 +26,18 @@ app.get('/admin', (req, res) => {
   res.sendFile(path.join(htmlDirectory, 'admin.html'));
 });
 
+app.get('/accommodation', (req, res) => {
+  res.sendFile(path.join(htmlDirectory, 'accommodation.html'));
+});
+
+app.get('/amenities', (req, res) => {
+  res.sendFile(path.join(htmlDirectory, 'amenities.html'));
+});
+
+app.get('/about', (req, res) => {
+  res.sendFile(path.join(htmlDirectory, 'about_us.html'));
+});
+
 // Define the directory where your CSS files are stored
 const cssDirectory = path.join(__dirname, 'html');
 

@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Pong and Ninky’s Homestay</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     body{
         margin: 0;
         padding: 0;
-        background-image: url("/Sources/background.jpg");
+        background-image: url("/Sources/Front2.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
         }
         /* Styling the navigation bar */
         header {
@@ -46,6 +45,27 @@
         .nav-links li a:hover {
         color: #ffd700; /* Change the color on hover */
         }
+
+        .booking-frame{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 5px;
+        }
+
+        .book{
+          width: 90%;
+          padding: 20px;
+          border-radius: 15px;
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+          display: flex;
+          background-color:white;
+        }
+
+        .frame{
+          border: 1px solid black;
+          margin: 5px;
+        }
   </style>
 </head>
 <body>
@@ -53,19 +73,28 @@
       <nav>
           <ul class="nav-links">
               <li><a href="/">Home</a></li>
-              <li><a href="#">Accommodations</a></li>
+              <li><a href="/accommodation">Accommodations</a></li>
               <li><a href="/booking">Booking</a></li>
-              <li><a href="#">Amenities</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="/amenities">Amenities</a></li>
+              <li><a href="/about">About Us</a></li>
               <li><a href="/signin">Login</a></li>
           </ul>
       </nav>
   </header>
-  <h1>Database Contents:</h1>
-  <ul>
-    <% data.forEach((row) => { %>
-      <li><%= row.column_name %></li> <!-- Replace 'column_name' with your actual column name -->
-    <% }); %>
-  </ul>
+  <h1 style="text-align: center;">Available Rooms</h1>
+  <% data.forEach((row) => { %>
+  <div class="booking-frame">
+      <div class="book">
+        <div class="frame"><img src="<%= row.photo%>" alt="Room Photo"></div>
+        <div>
+          <p><%= row.room_description %></p> <!-- Replace 'column_name' with your actual column name -->
+          <h5>Price: <%= row.price%></h5>
+          <h5>Status:  <%= row.status %></h5>
+          <button type="button" data-id="<%= row.room_id %>" class="btn btn-success">Book</button>
+        </div>
+      </div>
+  </div>
+</div>
+  <% }); %>
 </body>
 </html>
