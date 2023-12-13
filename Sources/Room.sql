@@ -4,11 +4,7 @@ CREATE TABLE rooms(
     `room_id` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `room_description` TEXT NOT NULL,
     `price` INT(11) NOT NULL,
-    `status` VARCHAR(255) DEFAULT 'Available',
-    `booking_date` DATE NOT NULL,
-    `booking_time` TIME NOT NULL,
-    `checkout_date` DATE NOT NULL,
-    `checkout_time` TIME NOT NULL
+    `status` VARCHAR(255) DEFAULT 'Available'
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=UTF8MB4_GENERAL_CI;
 
 CREATE TABLE users(
@@ -20,6 +16,10 @@ CREATE TABLE users(
     `contact_number` INT(20) NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=UTF8MB4_GENERAL_CI;
 
+ALTER TABLE `users` MODIFY COLUMN `contact_number` VARCHAR(20) DEFAULT NULL;
+ALTER TABLE `users` ADD COLUMN `roles` VARCHAR(5) DEFAULT "Admin";
+INSERT INTO users VALUES (1000, 'A D. Min', 'administrator', 'admin@gmail.com', '4dm1n_P@ssw0rd', '09125647890', "Admin");
+
 CREATE TABLE feedbacks(
     `feedback_id` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `content` TEXT NOT NULL,
@@ -29,15 +29,17 @@ CREATE TABLE feedbacks(
 ALTER TABLE `rooms` ADD COLUMN `date_posted` DATE DEFAULT NULL;
 ALTER TABLE `rooms` ADD COLUMN `updated_at` DATE DEFAULT NULL;
 ALTER TABLE `rooms` ADD COLUMN `photo` VARCHAR(255) DEFAULT NULL;
-ALTER TABLE `users` ADD COLUMN `roles` VARCHAR(5) DEFAULT "User";
 
-ALTER TABLE `rooms` MODIFY COLUMN `booking_date` DATE DEFAULT NULL;
-ALTER TABLE `rooms` MODIFY COLUMN `booking_time` TIME DEFAULT NULL;
-ALTER TABLE `rooms` MODIFY COLUMN `checkout_date` DATE DEFAULT NULL;
-ALTER TABLE `rooms` MODIFY COLUMN `checkout_time` TIME DEFAULT NULL;
-ALTER TABLE `users` MODIFY COLUMN `contact_number` VARCHAR(20) DEFAULT NULL;
+
+
 
 ALTER TABLE `feedbacks` ADD COLUMN `date_commented` DATE DEFAULT NULL;
 
-    
-    
+CREATE TABLE booking(
+    `id` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `name` VARCHAR(255) NOT NULL,
+    `email` VARCHAR(255) NOT NULL,
+    `room_id` INT(11) NOT NULL UNIQUE
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=UTF8MB4_GENERAL_CI;
+
+ALTER TABLE `booking` ADD COLUMN `date_booked` DATE DEFAULT NULL;

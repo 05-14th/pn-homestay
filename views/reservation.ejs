@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Data</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Add some basic styling to the table */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <h1>Reservation System</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Reservation ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Room ID</th>
+        <th>Action</th>
+        <!-- Add more table headers for other user attributes -->
+      </tr>
+    </thead>
+    <tbody>
+      <% data.forEach(user => { %>
+        <tr>
+          <td><%= user.id %></td>
+          <td><%= user.name %></td>
+          <td><%= user.email %></td>
+          <td><%= user.room_id %></td>
+          <td>
+            <button class="btn btn-success" data-id="<%= user.id %>">Cofirm</button>
+            <button class="btn btn-danger" data-id="<%= user.room_id %>">Delete</button>
+          </td>
+          <!-- Add more table cells for other user attributes -->
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+  
+</body>
+</html>

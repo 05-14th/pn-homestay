@@ -158,20 +158,18 @@
 <body>
     <header>
         <nav>
-            <% data.forEach(user => { %>
              <ul class="nav-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/accommodation">Accommodations</a></li>
                 <li><a href="/booking">Booking</a></li>
                 <li><a href="/amenities">Amenities</a></li>
                 <li><a href="/about">About Us</a></li>
-                <% if (user.user_id !== null) { %>
-                    <li><a href="">user.username</a></li>
+                <% if (user_id !== null) { %>
+                    <li><a href=""><%= username%></a></li>
                 <% } else { %>
                     <li><a href="/signin">Login</a></li>
                 <% } %>
              </ul>
-             <%});%>
         </nav>
     </header>
     <main>

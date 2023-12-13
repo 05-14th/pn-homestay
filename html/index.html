@@ -33,10 +33,6 @@
         float: left;
         }
 
-        .nav-links li:last-child {
-            float: right;
-        }
-
         .nav-links li a {
         color: black;
         text-decoration: none;
@@ -171,7 +167,6 @@
                 <li><a href="/booking">Booking</a></li>
                 <li><a href="/amenities">Amenities</a></li>
                 <li><a href="/about">About Us</a></li>
-                <li><a href="/signin">Login</a></li>
              </ul>
         </nav>
     </header>
@@ -219,7 +214,7 @@
         <section class="parallax" id="parallax">
             <div class="parallax-content">
                 <div class="">
-                    <form>
+                    <form action="/feedback" method="post">
                         <h3 style="color:#000">Feedback</h3>
                         <input class="form-control feedback-input" name="email" placeholder="Email"><br>
                         <textarea class="form-control" rows="5" name="content" placeholder="Write your feedback here..."></textarea><br>
@@ -233,11 +228,11 @@
                 <img src="/Sources/Logo.jpg" alt="Logo" class="small-size">
                 <div class="footer-nav">
                     <span>&copy; 2023 Pong and Ninky’s Homestay. All rights reserved.&nbsp|&nbsp</span>
-                    <a href="">Home</a>
-                    <a href="">Accommodations</a>
-                    <a href="">Booking</a>
-                    <a href="">Amenities</a>
-                    <a href="">About Us</a>
+                    <a href="/">Home</a>
+                    <a href="/accommodation">Accommodations</a>
+                    <a href="/booking">Booking</a>
+                    <a href="/amenities">Amenities</a>
+                    <a href="/about">About Us</a>
                 </div>
             </div>
         </section>
