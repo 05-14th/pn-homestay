@@ -30,9 +30,6 @@ ALTER TABLE `rooms` ADD COLUMN `date_posted` DATE DEFAULT NULL;
 ALTER TABLE `rooms` ADD COLUMN `updated_at` DATE DEFAULT NULL;
 ALTER TABLE `rooms` ADD COLUMN `photo` VARCHAR(255) DEFAULT NULL;
 
-
-
-
 ALTER TABLE `feedbacks` ADD COLUMN `date_commented` DATE DEFAULT NULL;
 
 CREATE TABLE booking(
